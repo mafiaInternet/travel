@@ -1,0 +1,75 @@
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    @include responsive(lg){
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+    @include responsive(md){
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+    @include responsive(sm){
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+    @include responsive(xsm){
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+}
+
+.btn-default{
+    @include button($color-red, $color-pink, $color-white, 4.5rem, 1.4rem, 0.2rem ,0 , 2rem);
+    @include responsive(xsm){
+        @include button($color-red, $color-pink, $color-white, 4rem, 1.3rem, 0.2rem, 0, 2rem)
+    }
+}
+
+.btn-dark{
+    
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-white{
+    @include button($color-white, $color-white, $color-black, 3rem, 1.2rem, 0.3rem, 0, 0.2rem);
+    letter-spacing: 0.1rem;
+}
+
+.pr{
+    position: relative;
+}
+
+.group{
+    margin-bottom: 1.3rem;
+    &__controll{
+        display: block;
+        width: 100%;
+        border-radius: 0.4rem;
+        outline: none;
+        font-size: 1.6rem;
+        border: 1px solid $color-silver;
+        height: 5rem;
+        padding: 0 2rem;
+
+    }
+    span{
+        text-align: right;
+    }
+}
+
+.heading {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background: linear-gradient(to right, $color-red, $color-pink);
+    transform: rotate(-2deg);
+}

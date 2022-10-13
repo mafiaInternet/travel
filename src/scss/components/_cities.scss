@@ -1,0 +1,80 @@
+.cities{
+    margin:  8rem 0;
+    background: $color-sliver-light-2;
+    padding: 13rem 0;
+    transform: skewY(-5deg);
+    &__container{
+        transform: skewY(5deg);
+    }
+    &__body{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        background: $color-white;
+        border-radius: 1rem;
+        padding: 1rem;
+        &__image{
+            width: 100%;
+            height: 20rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s linear;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            .bestselling{
+                @include position(absolute, 1rem, 1rem, null, null, null, null);
+                @include status($color-orange, $color-white);
+            }
+            .new{
+                @include position(absolute, 1rem, 1rem, null, null, null, null);
+                @include status($color-green, $color-white);
+            }
+            .hot{
+                @include position(absolute, 1rem, 1rem, null, null, null, null);
+                @include status($color-red, $color-white);
+            }
+        }
+        &__contents{
+            margin: 1.5rem 0 0.5rem 0;
+            &__top{
+                @include align(flex, space-between, center, null);
+                &__name{
+                    font-size: 1.5rem
+                }
+                &__duration{
+                    @include align(flex, null, center, null);
+                    &__time{
+                        font-size: 1.4rem;
+                        margin-left: 0.6rem;
+                    }
+                }
+            }
+            &__price{
+                &__dollor{
+                    font-size: 1.8rem;
+                }
+                margin-top: 0.5rem;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+            &__facilities{
+                @include align(flex, space-between, center, null);
+                font-weight: 400;
+            }
+            &__button{
+                button{
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 1.3rem;
+                }
+            }
+        }
+    }
+}

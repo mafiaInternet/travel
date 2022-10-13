@@ -1,0 +1,35 @@
+.about{
+    &__contents{
+       margin: 5rem 0; 
+       &__left{
+        padding-right: 2rem;
+        @include responsive(lg){
+            text-align: center;
+        }
+       }
+       &__right{
+        padding: 10rem 0 1rem 3rem;
+        
+        h4{
+            color: $color-red;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+        }
+        h2{
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin: 2rem 0;
+           
+            
+        }
+        p{
+            color: $color-sliver-light-1;
+            font-size: 1.2rem;
+            line-height: 2rem;
+           
+        }
+       }
+    }
+}

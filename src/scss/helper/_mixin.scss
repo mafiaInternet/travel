@@ -1,0 +1,85 @@
+@mixin position($position, $top, $left, $bottom, $right, $width, $height){
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    width: $width;
+    height: $height;
+}
+
+@mixin align($display, $justify-content, $align-items, $height){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    height: $height;
+}
+
+@mixin button($color1, $color2, $textColor, $lineHeight, $fontSize, $bdr, $padding-tb, $padding-lr){
+    background: linear-gradient(to right, $color1, $color2);
+    color: $textColor;
+    text-decoration: none;
+    line-height: $lineHeight;
+    display: inline-block;
+    font-size: $fontSize;
+    border-radius: $bdr;
+    padding: $padding-tb $padding-lr;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@mixin animation($name, $duration, $time, $translate1, $translate2){
+    animation: $name $duration $time;
+        @keyframes #{$name} {
+            0%{
+                opacity: 0;
+                transform: translateY($translate1);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY($translate2);
+            }
+        }
+
+        
+}
+
+@mixin status($bg, $color) {
+    padding: 0.6rem 1.3rem;
+    background: $bg;
+    color: $color;
+    border-radius: 0.6rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+@mixin responsive($size){
+    @if($size == xl){
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if($size == lg){
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @if($size == md){
+        @media screen and (max-width: 992px) {
+            @content;
+        }
+    }
+    @if($size == sm){
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @if($size == xsm){
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    }
+    
+}

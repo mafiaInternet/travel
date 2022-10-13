@@ -1,0 +1,21 @@
+//Base
+@import './scss/base/base';
+
+//Helper
+@import './scss/helper/varibles';
+@import './scss/helper/mixin';
+
+//utils
+@import './scss/utils/utils';
+//Component
+@import './scss/components/header';
+@import './scss/components/nav';
+@import './scss/components/model';
+@import './scss/components//about';
+@import './scss//components/destinations';
+@import './scss//components/contact';
+@import './scss/components/detinationsInfo';
+@import './scss//components/cities.scss';
+@import './scss/components/services';
+@import './scss/components/reviews';
+@import './scss/components/footer';

@@ -1,0 +1,43 @@
+.model{
+    position: fixed;
+    @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+    background: rgba( 0, 0, 0, 0.4);
+    @include align(flex, center, center, null);
+    z-index: 1000;
+    &__heading{
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      span{
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        line-height: 1rem;
+        align-items: center;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+    }
+    &__body{
+        background: $color-white;
+        width: 38rem;
+        height: auto;
+        padding: 2rem;
+        font-size: 1.4rem;
+        .group{
+            span{
+                cursor: pointer;
+                border-bottom: 1px solid $color-black-dark;
+                &:hover{
+                    color: aqua;
+                    border-bottom: 1px solid aqua;
+                }
+            }
+        }
+    }
+    ::placeholder{
+        color: $color-black-dark;
+        font-size: 1.7rem;
+    }
+}

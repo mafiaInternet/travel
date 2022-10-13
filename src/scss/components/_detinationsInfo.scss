@@ -1,0 +1,24 @@
+.destinationInfo{
+    margin: 10rem 0;
+    &__p{
+        
+        font-size: 1.5rem;
+        color: $color-sliver-dark;
+        line-height: 2.8rem;
+    }
+    &__details{
+        @include align(flex, space-between, center, null);
+        padding: 1.3rem 0;
+        border-bottom: 1px dotted $color-sliver-light-1;
+        &__head{
+            font-size: 1.4rem;
+            color: $color-sliver-dark;
+        }
+        &__text{
+            font-size: 1.4rem;
+            color: $color-sliver-dark;
+            text-transform: capitalize;
+        }
+    }
+    
+}

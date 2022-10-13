@@ -1,0 +1,60 @@
+.nav__main{
+    height: 100%;
+    .navLayer{
+        @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 3;
+    }
+    &__toggle{
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 5;
+        text-align: end;
+        cursor: pointer;
+    }
+    &__contents{
+        background-color: $color-white;
+        @include position(fixed, 0, null, 0, 0, 31.2rem, 100%);
+        
+        z-index: 4;
+        .nav{
+            display: block;
+            position: absolute;
+            top: 30%;
+            text-align: end;
+            transform: translateY(100%);
+            width: 100%;
+            li{
+                width: 100%;
+                padding: 1rem 5rem 1rem 1rem;
+                a{
+                    
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    color: $color-black;
+                    
+                }
+                &:hover{
+                   
+                    background: linear-gradient(to right, $color-red 60%, $color-pink);
+            
+                    
+                }
+            }
+        }
+        @include responsive(lg){
+            width: 28.2rem;
+        }
+        @include responsive(md){
+            width: 25.2rem;
+        }
+        @include responsive(xsm){
+            width: 22.2rem;
+        }
+        
+    }
+    .close{
+        display: none;
+    }
+}

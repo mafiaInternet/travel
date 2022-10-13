@@ -1,0 +1,63 @@
+.contact{
+    &__contents{
+        &__left{
+            h4{
+                margin-bottom: 1rem;
+                font-weight: 700;
+                font-size: 1.6rem;
+            }
+            input{
+                width: 80%;
+                height: 3rem;
+                padding-left: 1rem;
+                &::placeholder{
+                    color: $color-black;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+            &__textarea{
+                textarea{
+                    width: 80%;
+                    height: 10rem;
+                    padding: 1rem;
+                    &::placeholder{
+                        color: $color-black;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+               
+            }
+           
+            @include responsive(md){
+                order: 2;
+                input, textarea{
+                    width: 100%;
+                }
+            }
+           
+        }
+        &__right{
+         
+            h4{
+                color: $color-red;
+                font-weight: 700;
+                font-size: 1.6rem;
+            }
+            h1{
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 4rem;
+            }
+            p{
+                color: $color-sliver-light-1;
+                font-size: 1.2rem;
+            }
+            @include responsive(md){
+                order: 1;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
